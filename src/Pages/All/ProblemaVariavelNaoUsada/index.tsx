@@ -13,7 +13,7 @@ export default function Book({ setBook }: Props) {
 		<>
 			<p>Compre um livro</p>
 			<Button variant="outlined" onClick={handleBuy}>
-				Comprar
+				a Comprar
 			</Button>
 		</>
 	);
