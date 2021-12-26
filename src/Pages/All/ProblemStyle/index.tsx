@@ -48,7 +48,7 @@ export default function Login() {
 		},
 	}));
 
-	//const useStyles = makeStyles(() => (stylesToMakeStyles(themeMaterial)));
+	// const useStyles = makeStyles(() => (stylesToMakeStyles(themeMaterial)));
 	const classes = useStyles();
 
 	useEffect(() => {
@@ -62,7 +62,7 @@ export default function Login() {
 				<CssBaseline />
 				<AppBar position="static" className={classes.root}>
 					<Toolbar style={{ justifyContent: 'center' }}>
-					 		<Typography variant="h6" noWrap>
+						<Typography variant="h6" noWrap>
 							<div className="nameHeader">Teste</div>
 						</Typography>
 					</Toolbar>
