@@ -12,7 +12,6 @@ import { useAuth } from '../../../Context/AuthContext';
 import Index from '.';
 
 describe('Login', () => {
-
 	test('Must contain the Text Field Username', () => {
 		renderizar(
 			<Router>
@@ -54,11 +53,11 @@ describe('Login', () => {
 		expect(textFieldPass.value).toMatch('potato');
 
 		const buttonEnter = screen.getByTestId('ButtonEnter');
-		fireEvent.submit(buttonEnter);
+		expect(buttonEnter).toBeInTheDocument();
+		// fireEvent.submit(buttonEnter);
+		fireEvent.click(buttonEnter);
 
-		await waitFor(
-			() => expect(screen.findByText('Loading...')).toBeInTheDocument(),
-			{ timeout: 8000 }
-		);
+		const loadingBar = await screen.findByTestId('LoadingBar');
+		expect(loadingBar).toBeInTheDocument();
 	});
 });

@@ -1,8 +1,8 @@
-/* eslint-disable no-unused-vars */
+// /* eslint-disable no-unused-vars */
 import { Button } from '@mui/material';
 
 type Props = {
-	setBook: (data: any) => void;
+	setBook(data: string): void;
 };
 
 export default function Book({ setBook }: Props) {
