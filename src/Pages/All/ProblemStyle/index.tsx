@@ -12,48 +12,48 @@ import stylesToMakeStyles from './stylesToMakeStyles';
 
 export default function Login() {
 	const themeMaterial = createTheme();
-	const useStyles = makeStyles(() => ({
-		rootOut: {
-			display: 'flex',
-			justifyContent: 'center',
-			padding: 10,
-			height: 'calc(100% - 100px)',
-		},
-		rootIn: {
-			display: 'flex',
-			alignItems: 'center',
-			justifyContent: 'center',
-			flexDirection: 'column',
-			textAlign: 'center',
-			marginTop: 6,
-			marginBottom: 6,
-			padding: 50,
-			width: '100%',
-			maxWidth: 750,
-		},
-		button: {
-			marginLeft: 10,
-		},
-		linhaInput: {
-			display: 'flex',
-			alignItems: 'center',
-			justifyContent: 'center',
-			margin: 10,
-			minWidth: 300,
-			maxWidth: 300,
-		},
-		root: {
-			flexGrow: 1,
-			display: 'flex',
-		},
-	}));
+	// const useStyles = makeStyles(() => ({
+	// 	rootOut: {
+	// 		display: 'flex',
+	// 		justifyContent: 'center',
+	// 		padding: 10,
+	// 		height: 'calc(100% - 100px)',
+	// 	},
+	// 	rootIn: {
+	// 		display: 'flex',
+	// 		alignItems: 'center',
+	// 		justifyContent: 'center',
+	// 		flexDirection: 'column',
+	// 		textAlign: 'center',
+	// 		marginTop: 6,
+	// 		marginBottom: 6,
+	// 		padding: 50,
+	// 		width: '100%',
+	// 		maxWidth: 750,
+	// 	},
+	// 	button: {
+	// 		marginLeft: 10,
+	// 	},
+	// 	linhaInput: {
+	// 		display: 'flex',
+	// 		alignItems: 'center',
+	// 		justifyContent: 'center',
+	// 		margin: 10,
+	// 		minWidth: 300,
+	// 		maxWidth: 300,
+	// 	},
+	// 	root: {
+	// 		flexGrow: 1,
+	// 		display: 'flex',
+	// 	},
+	// }));
 
-	// const useStyles = makeStyles(() => (stylesToMakeStyles(themeMaterial)));
+	const useStyles = makeStyles(stylesToMakeStyles);
 	const classes = useStyles();
 
 	useEffect(() => {
 		console.log('Bruno');
-		console.log(stylesToMakeStyles({ themeMaterial }));
+		console.log(stylesToMakeStyles(themeMaterial));
 	}, []);
 
 	return (

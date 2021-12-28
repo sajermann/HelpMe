@@ -8,10 +8,14 @@ export type ProtectedRouteProps = {
 	name: string;
 } & RouteProps;
 
+function RedirectHome() {
+	return <Redirect to="/all/home" />;
+}
+
 export default function Routes() {
 	return (
 		<Switch>
-			<Redirect from="/" to="/all/home" exact />
+			<Route path="/" exact component={RedirectHome} />
 			<Route name="home" path="/all/home" component={Home} exact />
 			<Route path="/all/style" component={ProblemStyle} exact />
 			<Route path="/all/tests" component={ProblemTests} exact />
