@@ -38,7 +38,7 @@ export const baseStyles = {
 	},
 };
 
-export default function stylesToMakeStyles(theme: Theme) {
+const stylesToMakeStyles = (theme: Theme) => {
 	const styles = {
 		...baseStyles,
 		teste: {
@@ -46,5 +46,7 @@ export default function stylesToMakeStyles(theme: Theme) {
 		},
 	};
 
-	return styles as StyleRules<{}, keyof typeof styles>;
-}
+	return styles as StyleRules<Record<never, never>, keyof typeof styles>;
+};
+
+export default stylesToMakeStyles;

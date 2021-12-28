@@ -12,7 +12,6 @@ import { useAuth } from '../../../Context/AuthContext';
 import Index from '.';
 
 describe('Login', () => {
-
 	test('Must contain the Text Field Username', () => {
 		renderizar(
 			<Router>
