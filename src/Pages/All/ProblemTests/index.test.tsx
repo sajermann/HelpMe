@@ -4,11 +4,9 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import {
 	render as renderizar,
 	screen,
-	waitFor,
 	fireEvent,
 } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-import { useAuth } from '../../../Context/AuthContext';
+
 import Index from '.';
 
 describe('Login', () => {
